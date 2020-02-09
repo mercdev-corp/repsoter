@@ -1,0 +1,25 @@
+---
+
+version: '3'
+
+services:
+  bot:
+    build: ./
+    image: tg_to_vk_bot:1
+    container_name: tg_to_vk_bot
+    env_file:
+      - ./environment
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped
+    volumes:
+      - ./entrypoint.sh/:/entrypoint.sh
+      - ./settings.json:/settings.json
+      - ../bot.py:/bot.py
+      - ../requirements.txt:/requirements.txt
+      - ../.env/:/.env
+      - ../tmp/:/tg_tmp
+      - ../bot/:/bot

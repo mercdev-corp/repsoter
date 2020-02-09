@@ -1,0 +1,4 @@
+{
+  "PASSWORD": "unique password to initiate you as admin",
+  "TG_BOT_TOKEN": "your bot toke taken from @botFather in Telegram"
+}

@@ -1,0 +1,3 @@
+# python 3.8
+python-telegram-bot[socks]==12.4.1
+topicaxis-opengraph==0.5
