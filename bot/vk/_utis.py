@@ -147,10 +147,11 @@ class ParsedMessage:
     def remove_files(self):
         for media in MEDIA_TYPES:
             for entry in getattr(self, media):
-                try:
-                    os.remove(entry['filename'])
-                except FileNotFoundError:
-                    pass
+                if filename := entry.get('filename', ''):
+                    try:
+                        os.remove(filename)
+                    except FileNotFoundError:
+                        pass
 
     def parse_url(self):
         shift = 0
