@@ -2,7 +2,7 @@
 
 **Requirements:**
 
-You need to have `Docker` and `Docker Copmose` on your server to run bot using Docker.
+You need to have `Docker` and `Docker Compose` on your server to run bot using Docker.
 
 Or you need use `Python 3.8` to run bot directly.
 
@@ -31,7 +31,7 @@ Clone repository to your server. Copy `docker/settings.json.example` to `docker/
 
 1. Create new bot in [@BotFather](https://t.me/BotFather). If you want to enable group messages reading also — disable privacy mode here before you'll add bot to target group!
 
-2. Add bot to target channel. Only then it'll get all updates from this channels.
+2. Add bot to target telegram channel. Only then it'll get all updates from this channels.
 
 3. Replace `"TG_BOT_TOKEN"` value with one you've get from [@BotFather](https://t.me/BotFather) in `docker/settings.json`.
 
@@ -41,7 +41,7 @@ Clone repository to your server. Copy `docker/settings.json.example` to `docker/
 
 5. Find bot in Telegram application and send `/start` command in chat. Bot will ask you for password. Answer with `"PASSWORD"` value you've stored in `docker/settings.json` file at 3rd step.
 
-6. Create new **standalone** app here [https://vk.com/editapp?act=create] if you have not one already. Publish your application is not necessary.
+6. Create new **standalone** app here [https://vk.com/editapp?act=create] if you have not one already. Publishing of your application is not necessary.
 
 7. Send `/config` command to bot and follow steps to setup connection to VK. 
 
