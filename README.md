@@ -11,8 +11,8 @@ Or you need use `Python 3.8` to run bot directly.
 - Basic security (allow commands only from owner)
 - Repost text.
 - Reformat marked text (insert visible links back).
-- Detect video links and post it as video on VK (enable video gallery on target VK group).
-- Upload and photo and groups of photos and post it (enable photo gallery on target VK group).
+- Detect video links and post it as video on VK (require enabled video gallery on target VK group).
+- Upload photo and groups of photos and post it (require enabled photo gallery on target VK group).
 - Add general link from text as attachments to show preview on VK.
 
 ## Execution
