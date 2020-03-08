@@ -15,7 +15,7 @@ VK_VIDEO_RE: re.Pattern = re.compile(
     r'(?:www\.)?'
     r'(?:'
     r'(?:youtube.com/(?:v/|embed/|watch))'
-    r'|youtu.be/\w+'
+    r'|youtu.be/[\w\-_]+'
     r'|vimeo.com/\d+'
     r'|twitch.tv/videos/\d+'
     # r'|mixer.com/\w+\?clip'
