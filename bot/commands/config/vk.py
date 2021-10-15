@@ -22,6 +22,7 @@ from bot.vk.client import Client, VK_AUTH_REDIRECT
 from bot.commands._states import (
     APP_ID,
     AUTH_URL,
+    CANCEL,
     END,
     START,
     VK_CONNECTION,
@@ -155,7 +156,7 @@ handler = ConversationHandler(
         AUTH_URL: [MessageHandler(Filters.regex(token_url_regex), auth_url),
                    CallbackQueryHandler(skip_auth_url, pattern='^' + str(AUTH_URL) + '$')],
     },
-    fallbacks=[CommandHandler('cancel', cancel)],
+    fallbacks=[CallbackQueryHandler(cancel, pattern='^' + str(CANCEL) + '$')],
     map_to_parent={
         END: START,
     },

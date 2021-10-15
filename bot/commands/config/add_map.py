@@ -291,7 +291,7 @@ handler = ConversationHandler(
         ADD_PUBLIC_ID: [CallbackQueryHandler(add_group_id, pattern='^add_group__-?[\w\d]+$')],
         CANCEL: [CallbackQueryHandler(cancel, pattern='^' + str(CANCEL) + '$')],
     },
-    fallbacks=[CommandHandler('cancel', cancel)],
+    fallbacks=[CallbackQueryHandler(cancel, pattern='^' + str(CANCEL) + '$')],
     map_to_parent={
         END: START,
     },

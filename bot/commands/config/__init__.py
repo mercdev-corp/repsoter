@@ -116,7 +116,7 @@ def start(update: Update, context: CallbackContext):
 
 
 handler = ConversationHandler(
-    entry_points=[CommandHandler('config', start)],
+    entry_points=[CallbackQueryHandler(start, pattern='^' + str(START) + '$')],
 
     states={
         START: [CallbackQueryHandler(start, pattern='^' + str(START) + '$')],
@@ -129,6 +129,6 @@ handler = ConversationHandler(
         CANCEL: [CallbackQueryHandler(cancel, pattern='^' + str(CANCEL) + '$')],
     },
 
-    fallbacks=[CommandHandler('cancel', cancel)],
+    fallbacks=[CallbackQueryHandler(cancel, pattern='^' + str(CANCEL) + '$')],
     per_message=True,
 )

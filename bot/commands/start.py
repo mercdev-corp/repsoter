@@ -3,6 +3,10 @@ from telegram.ext import CallbackContext, CommandHandler, ConversationHandler, F
 
 from bot.settings import settings
 from bot.utils import get_log
+from bot.commands._states import (
+    CANCEL,
+    START,
+)
 
 from ._utils import require_user
 
@@ -90,12 +94,12 @@ def cancel(update: Update, context: CallbackContext):
 
 
 handler = ConversationHandler(
-    entry_points=[CommandHandler('start', start)],
+    entry_points=[CallbackQueryHandler(start, pattern='^' + str(START) + '$')],
 
     states={
         PASSWORD: [MessageHandler(Filters.update.message, password)],
     },
 
-    fallbacks=[CommandHandler('cancel', cancel)],
+    fallbacks=[CallbackQueryHandler(cancel, pattern='^' + str(CANCEL) + '$')],
     per_message=True,
 )

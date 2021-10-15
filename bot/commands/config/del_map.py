@@ -293,7 +293,7 @@ handler = ConversationHandler(
         DEL_PUBLIC_ID: [CallbackQueryHandler(del_group_id, pattern='^del_group__-?[\w\d]+$')],
         CANCEL: [CallbackQueryHandler(cancel, pattern='^' + str(CANCEL) + '$')],
     },
-    fallbacks=[CommandHandler('cancel', cancel)],
+    fallbacks=[CallbackQueryHandler(cancel, pattern='^' + str(CANCEL) + '$')],
     map_to_parent={
         END: START,
     },
