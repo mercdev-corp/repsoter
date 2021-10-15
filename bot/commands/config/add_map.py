@@ -294,5 +294,6 @@ handler = ConversationHandler(
     fallbacks=[CommandHandler('cancel', cancel)],
     map_to_parent={
         END: START,
-    }
+    },
+    per_message=True,
 )

@@ -96,5 +96,6 @@ handler = ConversationHandler(
         PASSWORD: [MessageHandler(Filters.update.message, password)],
     },
 
-    fallbacks=[CommandHandler('cancel', cancel)]
+    fallbacks=[CommandHandler('cancel', cancel)],
+    per_message=True,
 )
