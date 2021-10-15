@@ -15,7 +15,7 @@ log = get_log(__name__)
 URL = 'https://api.vk.com/method'
 AUTH_URL = 'https://oauth.vk.com/authorize'
 VK_AUTH_REDIRECT = 'https://oauth.vk.com/blank.html'
-VER = '5.103'
+VER = '5.131'
 VK_FILES_UPLOAD_LIMIT = 5
 
 
