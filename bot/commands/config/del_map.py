@@ -10,10 +10,7 @@ from telegram import (
 from telegram.ext import (
     CallbackContext,
     CallbackQueryHandler,
-    CommandHandler,
     ConversationHandler,
-    Filters,
-    MessageHandler
 )
 
 from bot.bot import bot

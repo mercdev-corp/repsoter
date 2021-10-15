@@ -8,7 +8,6 @@ from telegram import (
 from telegram.ext import (
     CallbackContext,
     CallbackQueryHandler,
-    CommandHandler,
     ConversationHandler,
 )
 
