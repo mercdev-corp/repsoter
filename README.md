@@ -23,7 +23,9 @@ Go to `docker` directory in repository and run `docker-compose up -d` command
 
 **Native**
 
-Go to repository's directory and run `python3.8 bot.py -s "./docker/settings.json" -t "./tmp"` command.
+Install required packages using `pip install -r requirements.txt`. I recommend to use it in virtual environment.
+
+Then go to repository's directory and run `python3.8 bot.py -s "./docker/settings.json" -t "./tmp"` command.
 
 ## Setup
 
