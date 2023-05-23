@@ -1,4 +1,4 @@
 # python 3.8
-requests==2.26.0
+requests==2.31.0
 python-telegram-bot[socks]==13.7
 topicaxis-opengraph==0.5
